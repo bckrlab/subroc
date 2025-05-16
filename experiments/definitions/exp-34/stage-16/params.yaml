@@ -1,0 +1,8 @@
+PARAM_METRICS:
+  - "average_ranking_loss"
+  - "prc_auc_score"
+  - "sklearn.metrics.roc_auc_score"
+PARAM_RESULT_SET_PATH: "stage-15/merged_result_set.csv"
+PARAM_AUGMENTATION_RESULT_FILENAME: "metrics_augmented_result_set.csv"
+PARAM_DATA_IN_PATH: "stage-04/data"
+PARAM_MODELS_IN_PATH: "stage-02/models"

@@ -1,0 +1,3 @@
+PARAM_DATASET_NAME: "UCI Census-Income (KDD)"
+PARAM_MODEL_NAME: "xgboost_xgbclassifier_census_kdd_4_splits"
+PARAM_MODEL_TYPE: "xgboost_XGBClassifier"

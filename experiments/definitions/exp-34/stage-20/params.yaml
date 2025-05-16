@@ -1,0 +1,7 @@
+PARAM_BASE_CONFIG_FILENAME: "stage-20/base_config.yaml"
+PARAM_CONFIG_VARIABLES_FILENAME: "stage-20/config_variables.yaml"
+PARAM_CONFIG_VARIABLES_COUPLINGS_FILENAME: "stage-20/config_variables_couplings.yaml"
+PARAM_CONFIG_BASENAME_PREFIXES_FILENAME: "stage-20/config_basename_prefixes.yaml"
+PARAM_CONFIG_BASENAME_SUFFIXES_FILENAME: "stage-20/config_basename_suffixes.yaml"
+PARAM_CONFIG_OUT_PATH: "stage-21"
+PARAM_CONFIG_OUT_FILENAME_PREFIX: "filtered_"

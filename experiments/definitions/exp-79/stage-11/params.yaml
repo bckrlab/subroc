@@ -1,0 +1,2 @@
+PARAM_RUNTIMES_PATH: "stage-06/statistics_merged_runtimes.csv"
+PARAM_OUT_FILENAME: "runtimes_table.tex"

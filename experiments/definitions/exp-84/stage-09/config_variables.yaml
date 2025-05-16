@@ -1,0 +1,7 @@
+PARAM_QF: ["average_ranking_loss", "prc_auc_score", "sklearn.metrics.roc_auc_score"]
+PARAM_COVER_SIZE_WEIGHT: [0, 0, 0, 0.3, 0, 1, 0, 2]
+PARAM_CLASS_BALANCE_WEIGHT: [0, 0, 0.3, 0, 1, 0, 2, 0]
+PARAM_ENABLE_GENERALIZATION_AWARENESS: ["False", "True", "True", "True", "True", "True", "True", "True"]
+
+DUMMY_PARAM_MIN_SIZE_FRACTION: [0.004, 0.009, 0.2, 0.45, 0.7]
+DUMMY_PARAM_MAX_SIZE_FRACTION: [0.006, 0.011, 0.3, 0.55, 0.8]

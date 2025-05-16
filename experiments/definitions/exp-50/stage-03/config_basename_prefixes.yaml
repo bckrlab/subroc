@@ -1,0 +1,2 @@
+PARAM_QF_OUTPUT_BASENAME: "interestingness_measure_"
+PARAM_RESULT_SET_OUTPUT_BASENAME: "sd_result_set_"

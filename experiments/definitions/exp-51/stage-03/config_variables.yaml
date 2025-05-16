@@ -1,0 +1,4 @@
+PARAM_QF: ["average_ranking_loss", "prc_auc_score", "sklearn.metrics.roc_auc_score"]
+PARAM_COVER_SIZE_WEIGHT: [0, 1]
+PARAM_CLASS_BALANCE_WEIGHT: [0, 1]
+PARAM_ENABLE_GENERALIZATION_AWARENESS: ["False", "True"]

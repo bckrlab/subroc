@@ -1,0 +1,2 @@
+PARAM_RUNTIME_SPEEDUPS_PATH: "stage-07/speedups_statistics_merged_runtimes.csv"
+PARAM_OUT_FILENAME_SUFFIX: "speedups_table.tex"

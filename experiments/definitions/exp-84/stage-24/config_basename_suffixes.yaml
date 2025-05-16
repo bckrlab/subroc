@@ -1,0 +1,3 @@
+PARAM_DATA_IN_PATH: ""
+PARAM_PATTERNS_IN_PATH: "_picked_patterns.csv"
+PARAM_RESULT_SET_IN_PATH: ".csv"

@@ -1,0 +1,3 @@
+PARAM_DATASET_NAME: "Statlog (German Credit Data)"
+PARAM_MODEL_NAME: "model"
+PARAM_MODEL_TYPE: "xgboost_XGBClassifier"

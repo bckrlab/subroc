@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage[active,graphics,tightpage]{preview}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{makecell}
+
+\begin{document}
+
+    \begingroup
+    \ttfamily
+    \let\\\relax
+    % change category code of \r to 12, preserving linebreaks
+    \catcode`\^^M=12
+    % change category code of % to 12, disabling its function for TeX comments
+    \catcode`\%=12
+    \directlua{
+        local lfs = require("lfs")
+        local path = "/experiment/output/stage-24"
+        tex.print("\\endgroup")
+        for file in lfs.dir(path) do
+            if file:match("%.tex$") then
+                texio.write_nl("File detected: " .. file)
+                tex.print("\\begin{preview}")
+                tex.print(string.gsub(file, "_", " "))
+                tex.print("\\end{preview}")
+                tex.print("\\begin{preview}")
+                tex.print("\\input{" .. path .. "/" .. file .. "}")
+                tex.print("\\end{preview}")
+            end
+        end
+        tex.print("\\begingroup")
+    }
+    \endgroup
+
+\end{document}

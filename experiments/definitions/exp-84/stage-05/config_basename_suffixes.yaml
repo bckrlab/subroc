@@ -1,0 +1,2 @@
+PARAM_DATA_OUT_PATH: "/processed/openml_adult"
+PARAM_PATTERNS_IN_PATH: "_picked_patterns.csv"

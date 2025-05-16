@@ -1,0 +1,3 @@
+PARAM_GROUPBY_COLUMN_NAME: "pre_merge_filename"
+PARAM_RESULT_IN_PATH: "stage-17/statistics_augmented_result_set.csv"
+PARAM_RESULT_OUT_FILENAME_NO_SUFFIX: "groupby"

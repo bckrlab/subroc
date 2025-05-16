@@ -1,0 +1,3 @@
+PARAM_RUNTIME_STATISTICS_PATH: "stage-06/statistics_merged_runtimes.csv"
+PARAM_OUT_FILENAME_PREFIX: "speedups_"
+PARAM_RUNTIME_STATISTIC: "time_median"

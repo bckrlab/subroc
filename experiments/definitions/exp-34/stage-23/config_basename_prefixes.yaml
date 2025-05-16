@@ -1,0 +1,3 @@
+PARAM_RESULT_SET_PATH: "stage-21/sorted_groupby_filtered_"
+PARAM_CSV_RESULT_FILENAME: "filtered_result_set_table_"
+PARAM_LATEX_RESULT_FILENAME: "filtered_result_set_table_"

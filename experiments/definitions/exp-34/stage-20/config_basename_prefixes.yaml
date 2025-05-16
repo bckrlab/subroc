@@ -1,0 +1,2 @@
+PARAM_RESULT_IN_PATH: "stage-18/groupby_with_empty_pattern_top_k_filtered_filtered_"
+PARAM_RESULT_OUT_FILENAME: "sorted_groupby_filtered_"

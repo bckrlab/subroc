@@ -1,0 +1,15 @@
+PARAM_PATTERN_COLUMN: "pattern"
+PARAM_RESULT_SET_PATH:
+PARAM_DATA_IN_PATH: "stage-01/data"
+PARAM_CSV_RESULT_FILENAME:
+PARAM_LATEX_RESULT_FILENAME:
+PARAM_COLUMN_NAME_MAP:
+  interestingness: "Interestingness"
+  pattern: "Pattern"
+  average_ranking_loss: "ARL"
+  prc_auc_score: "PR AUC"
+  sklearn.metrics.roc_auc_score: "ROC AUC"
+  cover_size: "Cover"
+  negative_class_ratio: "NCR"
+PARAM_COLUMN_FORMAT: "@{}r@{\\hspace{2mm}}l@{\\hspace{2mm}}r@{\\hspace{2mm}}r@{\\hspace{2mm}}r@{\\hspace{2mm}}r@{\\hspace{2mm}}r@{}"
+PARAM_LINE_SPACE: "5pt"

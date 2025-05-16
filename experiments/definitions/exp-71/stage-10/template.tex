@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage[active,graphics,tightpage]{preview}
+\usepackage{booktabs}
+\usepackage{xparse}
+\usepackage{amsmath}
+\usepackage{color}
+
+\ExplSyntaxOn
+
+\NewDocumentCommand{\getenv}{om}
+ {
+  \sys_get_shell:nnN { kpsewhich ~ --var-value ~ #2 } { } \l_tmpa_tl
+  \tl_trim_spaces:N \l_tmpa_tl
+  \IfNoValueTF { #1 }
+   {
+    \tl_use:N \l_tmpa_tl
+   }
+   {
+    \tl_set_eq:NN #1 \l_tmpa_tl
+   }
+ }
+
+\ExplSyntaxOff
+
+\getenv[\STAGEOUTPUTPATH]{STAGE_OUTPUT_PATH}
+
+\begin{document}
+
+    \begin{preview}
+        Runtime
+    \end{preview}
+
+    \begin{preview}
+        \input{\STAGEOUTPUTPATH/runtime_speedups_table.tex}
+    \end{preview}
+
+    \begin{preview}
+        Number of Visited Subgroups
+    \end{preview}
+
+    \begin{preview}
+        \input{\STAGEOUTPUTPATH/num_visited_subgroups_speedups_table.tex}
+    \end{preview}
+
+\end{document}

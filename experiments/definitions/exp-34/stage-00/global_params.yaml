@@ -1,0 +1,3 @@
+PARAM_DATASET_NAME: "OpenML Adult"
+PARAM_MODEL_NAME: "model"
+PARAM_MODEL_TYPE: "sklearn_naive_bayes_GaussianNB"

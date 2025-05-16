@@ -1,0 +1,5 @@
+PARAM_FULL_RESULT_SET_PATH: "stage-06/p_value_augmented_"
+PARAM_FILTERED_RESULT_SET_PATH: "stage-08/filtered_"
+PARAM_SEARCH_QF_PATH: "stage-04/interestingness_measure_"
+PARAM_AUGMENTATION_QF_PATH: "stage-06/p_value_augmentation_interestingness_measure_"
+PARAM_PLOT_BASENAME: "generalizability_plot_"

@@ -1,0 +1,2 @@
+PARAM_RESULT_SET_PATH: "stage-11/top_k_filtered_sd_result_set_"
+PARAM_INTERESTINGNESS_MEASURE_PATH: "stage-04/interestingness_measure_"

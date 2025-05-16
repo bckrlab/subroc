@@ -1,0 +1,9 @@
+PARAM_DF_DIR: "stage-04"
+PARAM_DF_FILENAMES:
+  - "runtimes_average_ranking_loss_no_oe.csv"
+  - "runtimes_average_ranking_loss_with_oe.csv"
+  - "runtimes_prc_auc_score_no_oe.csv"
+  - "runtimes_prc_auc_score_with_oe.csv"
+  - "runtimes_sklearn.metrics.roc_auc_score_no_oe.csv"
+  - "runtimes_sklearn.metrics.roc_auc_score_with_oe.csv"
+PARAM_MERGE_RESULT_FILENAME: "merged_runtimes.csv"

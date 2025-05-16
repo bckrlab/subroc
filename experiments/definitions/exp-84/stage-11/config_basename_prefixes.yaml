@@ -1,0 +1,5 @@
+PARAM_DATA_IN_PATH: "stage-06/data/"
+PARAM_RESULT_SET_PATH: "stage-10/sd_result_set_"
+PARAM_QF_PATH: "stage-10/interestingness_measure_"
+PARAM_QF_OUTPUT_BASENAME: "p_value_augmentation_interestingness_measure_"
+PARAM_FILTERING_RESULT_FILENAME: "p_value_augmented_"

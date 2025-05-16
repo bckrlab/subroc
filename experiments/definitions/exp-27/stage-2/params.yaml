@@ -1,0 +1,25 @@
+PARAM_IMAGES_IN_DIR: "stage-1"
+PARAM_IMAGE_FILENAMES:
+  - "result_factors_analytical_size_average_ranking_loss_maximal_s0_cb0"
+  - "result_factors_analytical_size_average_ranking_loss_maximal_s1_cb0"
+  - "result_factors_analytical_size_average_ranking_loss_maximal_s0_cb1"
+  - "result_factors_analytical_size_roc_auc_score_maximal_s0_cb0"
+  - "result_factors_analytical_size_roc_auc_score_maximal_s1_cb0"
+  - "result_factors_analytical_size_roc_auc_score_maximal_s0_cb1"
+  - "result_factors_analytical_size_prc_auc_score_maximal_s0_cb0"
+  - "result_factors_analytical_size_prc_auc_score_maximal_s1_cb0"
+  - "result_factors_analytical_size_prc_auc_score_maximal_s0_cb1"
+  - "result_factors_analytical_class_balance_average_ranking_loss_maximal_s0_cb0"
+  - "result_factors_analytical_class_balance_average_ranking_loss_maximal_s1_cb0"
+  - "result_factors_analytical_class_balance_average_ranking_loss_maximal_s0_cb1"
+  - "result_factors_analytical_class_balance_roc_auc_score_maximal_s0_cb0"
+  - "result_factors_analytical_class_balance_roc_auc_score_maximal_s1_cb0"
+  - "result_factors_analytical_class_balance_roc_auc_score_maximal_s0_cb1"
+  - "result_factors_analytical_class_balance_prc_auc_score_maximal_s0_cb0"
+  - "result_factors_analytical_class_balance_prc_auc_score_maximal_s1_cb0"
+  - "result_factors_analytical_class_balance_prc_auc_score_maximal_s0_cb1"
+
+PARAM_BORDER_SIZE: 10
+PARAM_KERNEL_WIDTH: 11
+PARAM_KERNEL_HEIGHT: 11
+PARAM_KERNEL_STD: 0

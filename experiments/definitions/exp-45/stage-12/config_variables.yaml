@@ -1,0 +1,4 @@
+DUMMY_PARAM_QF: ["prc_auc_score", "sklearn.metrics.roc_auc_score"]
+DUMMY_PARAM_COVER_SIZE_WEIGHT: [0, 1, 0]
+DUMMY_PARAM_CLASS_BALANCE_WEIGHT: [0, 1, 0]
+DUMMY_PARAM_ENABLE_GENERALIZATION_AWARENESS: ["False", "True"]

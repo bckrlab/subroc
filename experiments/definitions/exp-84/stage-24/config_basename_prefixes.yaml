@@ -1,0 +1,3 @@
+PARAM_DATA_IN_PATH: "stage-06/data/"
+PARAM_PATTERNS_IN_PATH: "stage-04/"
+PARAM_RESULT_SET_IN_PATH: "stage-10/sd_result_set_"

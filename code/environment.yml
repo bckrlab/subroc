@@ -1,0 +1,10 @@
+name: subroc
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pyscaffoldext-markdown
+  - pyscaffold
+  - pip=23.3.*
+  - pip:
+      - -r requirements.txt
