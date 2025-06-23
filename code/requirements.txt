@@ -1,3 +1,5 @@
+pyscaffold~=4.6
+pyscaffoldext-markdown~=0.5
 jupyter~=1.0.0
 notebook~=7.0.6
 pandas~=2.1.4

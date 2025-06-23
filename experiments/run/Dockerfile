@@ -1,65 +1,34 @@
-FROM mambaorg/micromamba:1.5.8-noble
+# Nix builder
+FROM nixos/nix:2.29.0 AS builder
 
-# prepare installing packages
 USER root
-RUN apt-get update -q
 
-# install latex
-ARG TL_MIRROR="https://mirror.ctan.org/systems/texlive/tlnet"
+# install packages
+ENV NIX_CONFIG="experimental-features = nix-command flakes"
+COPY flake.nix /tmp/build/flake.nix
+COPY flake.lock /tmp/build/flake.lock
+WORKDIR /tmp/build
+RUN nix profile install --profile /nix-profile
 
-RUN apt-get install perl curl wget fontconfig ca-certificates gnupg -q -y --no-install-recommends && \
-    mkdir "/tmp/texlive" && cd "/tmp/texlive" && \
-    wget "$TL_MIRROR/install-tl-unx.tar.gz" && \
-    tar xzvf ./install-tl-unx.tar.gz && \
-    ( \
-        echo "selected_scheme scheme-minimal" && \
-        echo "instopt_adjustpath 0" && \
-        echo "tlpdbopt_install_docfiles 0" && \
-        echo "tlpdbopt_install_srcfiles 0" && \
-        echo "TEXDIR /opt/texlive/" && \
-        echo "TEXMFLOCAL /opt/texlive/texmf-local" && \
-        echo "TEXMFSYSCONFIG /opt/texlive/texmf-config" && \
-        echo "TEXMFSYSVAR /opt/texlive/texmf-var" && \
-        echo "TEXMFHOME ~/.texmf" \
-    ) > "/tmp/texlive.profile" && \
-    "./install-tl-"*"/install-tl" --location "$TL_MIRROR" -profile "/tmp/texlive.profile" && \
-    rm -vf "/opt/texlive/install-tl" && \
-    rm -vf "/opt/texlive/install-tl.log" && \
-    rm -vrf /tmp/*
+# save the nix store closure for the profile (i.e. exactly the necessary packages + profile, which
+# contains a convenient collection of links to those packages)
+RUN mkdir /tmp/nix-store-closure
+RUN cp -R $(nix-store -qR /nix-profile) /tmp/nix-store-closure
 
-ENV PATH="${PATH}:/opt/texlive/bin/x86_64-linux"
+# switch to micromamba image for final image
+FROM mambaorg/micromamba:1.5.8-noble
+USER root
 
-# install latex packages
-RUN tlmgr install scheme-basic
-
-# install linux packages
-# original versions are given, but they cannot be used since apt repositories don't keep old package versions
-# (cm-super, dvipng, texlive-latex-extra and texlive-fonts-recommended are necessary for matplotlib text rendering)
-RUN apt-get install -q -y --no-install-recommends\
-    # tmux=3.4-1build1 \
-    tmux \
-    # time=1.9-0.2build1 \
-    time \
-    # cm-super=0.3.4-17 \
-    cm-super \
-    # dvipng=1.15-1.1 \
-    dvipng \
-    # texlive-latex-extra=2023.20240207-1 \
-    texlive-latex-extra \
-    # texlive-fonts-recommended=2023.20240207-1 \
-    texlive-fonts-recommended \
-    # texlive-luatex=2023.20240207-1 && \
-    texlive-luatex && \
-    rm -rf /var/cache/apt && \
-    apt-get clean
-
-# set build argument
-ARG EXPERIMENT_CODE_PATH
+# take along the packages that nix installed
+COPY --from=builder /tmp/nix-store-closure /nix/store
+COPY --from=builder /nix-profile /nix-profile
+ENV PATH="/nix-profile/bin:${PATH}"
 
 # add the code
+ARG EXPERIMENT_CODE_PATH
 ADD code $EXPERIMENT_CODE_PATH
 
-# set up the conda environment
+# set up the python environment
 RUN cp -r $EXPERIMENT_CODE_PATH/. /tmp
 RUN micromamba install -y --name base --file /tmp/environment.yml
 RUN micromamba clean --all --yes
