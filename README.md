@@ -45,6 +45,7 @@ Steps are defined through bash scripts.
 - Experiments using the Census KDD dataset (48, 71, 79, 105, 113) require a large amount of memory (about 170GB per parallel run, of which there are up to 12).
     - We changed the search algorithm in exp-48 to BestFirstSearch to improve memory consumption. Results might therefore be slightly different to those in the paper. For exact reproduction, change this back to Apriori in `experiments/definitions/exp-48/stage-03/base_config.yaml`.
 - Sometimes the Adult dataset fails to load because OpenML is temporarily unavailable. Try again later in that case.
+- The preprocessing splits the data into 4 equal parts. Only the first 3 are used for the paper results.
 
 ### Meta Reports
 
