@@ -1,5 +1,7 @@
 # SubROC Experiments
 
+[![DOI](https://zenodo.org/badge/984705403.svg)](https://doi.org/10.5281/zenodo.16952343)
+
 SubROC is a machine learning model evaluation method based on Subgroup Discovery in the Exceptional Model Mining framework, aimed at providing interpretable descriptions of strengths and weaknesses for a given model on structured data.
 
 This is the code repository accompanying the paper "SubROC: AUC-Based Discovery of Exceptional Subgroup Performance for Binary Classifiers".
