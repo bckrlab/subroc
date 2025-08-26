@@ -1,8 +1,0 @@
-PARAM_RESULT_IN_PATH: "stage-17/statistics_augmented_result_set.csv"
-PARAM_RESULT_OUT_FILENAME: "mean_pairwise_ious.csv"
-PARAM_DATA_IN_PATH: "stage-04/data"
-PARAM_MODELS_IN_PATH: "stage-02/models"
-
-PARAM_GROUPBY_COLUMN_NAME: "pre_merge_filename"
-PARAM_DATASET_NAME: "OpenML Adult"
-PARAM_MODEL_NAME: "sklearn_gaussian_nb_adult_4_splits"
